@@ -1,0 +1,3 @@
+- Para la realización de k-fold utilizando el dataset Polarity, tienen que hacerlo con solo un valor de K. Valor recomendado: k = 5.
+
+- Para la confección de las matrices de confusión obtenidas utilizando el dataset Polarity y el método k-fold, reportar solo dos matrices. La de mejor y peor resultado de los k experimentos.

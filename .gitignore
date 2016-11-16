@@ -1,0 +1,10 @@
+TestSet/
+TestSet 2/
+TrainSet/
+TrainSet 2/
+*.pyc
+__pycache__
+.ipynb_checkpoints
+./logs/all_images/*
+tarea2_/
+tarea2_.zip
