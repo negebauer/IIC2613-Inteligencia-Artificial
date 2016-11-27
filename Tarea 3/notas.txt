@@ -1,3 +1,17 @@
 - Para la realización de k-fold utilizando el dataset Polarity, tienen que hacerlo con solo un valor de K. Valor recomendado: k = 5.
 
 - Para la confección de las matrices de confusión obtenidas utilizando el dataset Polarity y el método k-fold, reportar solo dos matrices. La de mejor y peor resultado de los k experimentos.
+
+- Quería hacer una aclaración sobre el uso del stemmer en la Tarea 3, el uso de este es opcional. Este está ahí para que lo tengan como opción de mejorar sus resultados y lo ideal es que prueben como son sus resultados utilizando stemmer y no.
+
+- Al entregar sus tareas, no incluir los dataset ni modelos. Solo sus códigos, informe, readme y lo que hayan elaborado para resolver su tarea.
+
+- No olviden el readme explicando como reproducir sus pruebas. La ausencia de este archivo, implica descuento automático.
+
+- Entreguen informes que sean autocontenidos. Evitar que la corrección implique ir a buscar datos o resultados en distintos archivos. Para esto pueden usar pdf o ipython notebook, pero sean cuidadosos con el orden.
+
+- Cuando incluyan figuras, agregar una breve descripción y número de imagen al pie. Sobretodo para los que escriben en Latex, donde las figuras quedan posicionadas de forma automática, y no siempre, en coherencia con el texto. Traten de que se entienda a que corresponde cada figura.
+
+- Tengan especial cuidado de responder cada una de las preguntas del enunciado, ya que la corrección estará directamente basada en lo que se les pide. Si no existe alguna de las respuestas que se desea evaluar, el puntaje será cero.
+
+- Sean claros y concisos en sus respuestas. Los detalles deben estar enfocados en sus procedimiento y conclusiones, más que explicar la materia de clases.
