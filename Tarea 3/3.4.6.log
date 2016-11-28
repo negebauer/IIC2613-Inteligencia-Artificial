@@ -1,6 +1,10 @@
 movies_linear
 accuracy
-0.83312
+0.7
 precision
-0.833123078590243
+0.7083333333333333
 movies_rbf
+accuracy
+0.6
+precision
+0.7777777777777778
