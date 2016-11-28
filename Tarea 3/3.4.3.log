@@ -14,3 +14,7 @@ accuracy
 precision
 0.8371272582150184
 movies_rbf
+accuracy
+0.747
+precision
+0.7488890415426257
