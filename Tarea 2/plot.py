@@ -1,6 +1,7 @@
 import itertools
 import numpy as np
-from config_matplotlib import nothing
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 
 

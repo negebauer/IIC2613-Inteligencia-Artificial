@@ -1,0 +1,45 @@
+Comparing most similar to positives ['woman', 'king'] and negatives ['man']
+(u'queen', 0.7118192315101624)
+(u'monarch', 0.6189674139022827)
+(u'princess', 0.5902431011199951)
+(u'crown_prince', 0.5499460697174072)
+(u'prince', 0.5377321839332581)
+(u'kings', 0.5236844420433044)
+(u'Queen_Consort', 0.5235946178436279)
+(u'queens', 0.5181134343147278)
+(u'sultan', 0.5098593235015869)
+(u'monarchy', 0.5087412595748901)
+
+Comparing most similar to positives ['paris', 'italy'] and negatives ['france']
+(u'lohan', 0.5069675445556641)
+(u'madrid', 0.48184293508529663)
+(u'heidi', 0.4799900949001312)
+(u'real_madrid', 0.4753322899341583)
+(u'florence', 0.4682057499885559)
+(u'diego', 0.467273086309433)
+(u'ronnie', 0.4672326445579529)
+(u'juventus', 0.4672061502933502)
+(u'joel', 0.46537238359451294)
+(u'huntelaar', 0.46358999609947205)
+
+Comparing most similar to positives ['car', 'water'] and negatives ['wheels']
+(u'sewage', 0.5073274374008179)
+(u'groundwater', 0.48820173740386963)
+(u'Floridan_aquifer', 0.4697296917438507)
+(u'aquifers', 0.4586605429649353)
+(u'Water', 0.4582120180130005)
+(u'underground_aquifer', 0.4578779935836792)
+(u'tapwater', 0.453736811876297)
+(u'freshwater', 0.4533122479915619)
+(u'shallow_aquifer', 0.44539833068847656)
+(u'Elephant_Butte_Reservoir', 0.44529250264167786)
+
+Comparing similarity of breakfast with cereal
+0.365095440625
+
+Comparing similarity of class with course
+0.22938951003
+
+Comparing similarity of man with men
+0.548976303226
+
