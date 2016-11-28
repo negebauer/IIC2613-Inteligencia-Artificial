@@ -129,6 +129,9 @@ Se observa que hay una diferencia de 100 entre los falsos positivos y los falsos
 
 ##### Mejoras
 
-
+Lo primero que se podría considerar es variar el coeficiente de penalización `C`, el cual se mantuvo fijo en `1`. Como se vio en la tarea anterior, al variar dicho coeficiente los resultados cambian, por lo que se podrían mejorar encontrando un mejor `C`.  
+Otro tema relevante es como se codifican las palabras con `word2vec`. En este caso se tiene un sistema de codificación que fue entrenado con noticias. Por lo tanto, el sistema esta "más ajustado" para el uso de las palabras y frases en el contexto de noticias. Luego se utiliza para evaluar comentarios de películas, un contexto en el cual las palabras se usan distinto que en las noticias. Es decir, si se tuviera un modelo `word2vec` entrenado con críticas de películas la predicción debería ser mejor (una forma de 'sobre ajuste').
 
 ##### Críticas inventadas
+
+Se volvió a probar el rendimiento de clasificación con SVM con las críticas inventadas, las cuales se encuentran en [fake_reviews](./fake_reviews) 
