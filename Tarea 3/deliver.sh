@@ -23,7 +23,7 @@ files_load() {
   # ls | grep '.zip' >> $list
   # ls | grep '.txt' >> $list
   echo 'readme.txt' >> $list
-  echo 'fake_reviews.txt' >> $list
+  echo 'fake_reviews' >> $list
   echo 'tarea3_GebauerNicolas.md' >> $list
   echo 'tarea3_GebauerNicolas.pdf' >> $list
   ls | grep '.sh' >> $list
