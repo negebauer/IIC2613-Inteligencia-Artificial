@@ -3,3 +3,14 @@ accuracy
 0.806
 precision
 0.807105580088318
+polarity_rbf
+accuracy
+0.7105
+precision
+0.7277214334009465
+movies_linear
+accuracy
+0.83312
+precision
+0.833123078590243
+movies_rbf

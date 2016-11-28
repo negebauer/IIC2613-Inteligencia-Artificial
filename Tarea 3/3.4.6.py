@@ -20,10 +20,9 @@ stemmer = PorterStemmer()  # stemmer
 model = Word2Vec.load_word2vec_format('./google_news.bin', binary=True)
 st = stemmer.stem  # get the stemming function
 
-log = Log('3.4.3')
-path_polarity = './review_polarity/txt_sentoken'
+log = Log('3.4.6')
 path_movie_train = './aclImdb/train'
-path_movie_test = './aclImdb/test'
+path_movie_test = './fake_reviews'
 stop_words = set(stopwords.words('english'))
 class_names = ['Negative', 'Positive']
 vector = 300
@@ -63,36 +62,6 @@ def get_data(filename):
     labels = set_positive[1] + set_negative[1]
     return critics, labels
 
-print('Getting data polarity')
-polarity_all = get_data(path_polarity)
-polarity_critics, polarity_labels = polarity_all[0], polarity_all[1]
-
-print('polarity_linear')
-log.log('polarity_linear')
-classifier = svm.SVC(C=1, kernel='linear')
-prediction = cross_val_predict(classifier, polarity_critics, polarity_labels, cv=10)
-accuracy = metrics.accuracy_score(polarity_labels, prediction)
-precision = metrics.precision_score(polarity_labels, prediction, average="macro")
-log.log('accuracy')
-log.log(accuracy)
-log.log('precision')
-log.log(precision)
-confusion_matrix = metrics.confusion_matrix(polarity_labels, prediction)
-log.plot_confusion_matrix(confusion_matrix, class_names, 'polarity_linear.png', 'polarity_linear')
-
-print('polarity_rbf')
-log.log('polarity_rbf')
-classifier = svm.SVC(C=1, kernel='rbf')
-prediction = cross_val_predict(classifier, polarity_critics, polarity_labels, cv=10)
-accuracy = metrics.accuracy_score(polarity_labels, prediction)
-precision = metrics.precision_score(polarity_labels, prediction, average="macro")
-log.log('accuracy')
-log.log(accuracy)
-log.log('precision')
-log.log(precision)
-confusion_matrix = metrics.confusion_matrix(polarity_labels, prediction)
-log.plot_confusion_matrix(confusion_matrix, class_names, 'polarity_rbf.png', 'polarity_rbf')
-
 print('Getting data movies')
 movies_train_all = get_data(path_movie_test)
 movies_train_critics, movies_train_labels = movies_train_all[0], movies_train_all[1]
@@ -112,7 +81,7 @@ log.log(accuracy)
 log.log('precision')
 log.log(precision)
 confusion_matrix = metrics.confusion_matrix(movies_test_labels, prediction)
-log.plot_confusion_matrix(confusion_matrix, class_names, 'movies_linear.png', 'movies_linear')
+log.plot_confusion_matrix(confusion_matrix, class_names, 'fake_movies_linear.png', 'fake_movies_linear')
 
 print('movies_rbf')
 log.log('movies_rbf')
@@ -126,4 +95,4 @@ log.log(accuracy)
 log.log('precision')
 log.log(precision)
 confusion_matrix = metrics.confusion_matrix(movies_test_labels, prediction)
-log.plot_confusion_matrix(confusion_matrix, class_names, 'movies_rbf.png', 'movies_rbf')
+log.plot_confusion_matrix(confusion_matrix, class_names, 'fake_movies_rbf.png', 'fake_movies_rbf')
