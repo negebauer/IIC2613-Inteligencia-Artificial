@@ -94,10 +94,10 @@ confusion_matrix = metrics.confusion_matrix(polarity_labels, prediction)
 log.plot_confusion_matrix(confusion_matrix, class_names, 'polarity_rbf.png', 'polarity_rbf')
 
 print('Getting data movies')
-movies_train_all = get_data(path_movie_test)
+movies_train_all = get_data(path_movie_train)
 movies_train_critics, movies_train_labels = movies_train_all[0], movies_train_all[1]
 
-movies_test_all = get_data(path_movie_train)
+movies_test_all = get_data(path_movie_test)
 movies_test_critics, movies_test_labels = movies_test_all[0], movies_test_all[1]
 
 print('movies_linear')

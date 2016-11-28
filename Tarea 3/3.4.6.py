@@ -63,10 +63,10 @@ def get_data(filename):
     return critics, labels
 
 print('Getting data movies')
-movies_train_all = get_data(path_movie_test)
+movies_train_all = get_data(path_movie_train)
 movies_train_critics, movies_train_labels = movies_train_all[0], movies_train_all[1]
 
-movies_test_all = get_data(path_movie_train)
+movies_test_all = get_data(path_movie_test)
 movies_test_critics, movies_test_labels = movies_test_all[0], movies_test_all[1]
 
 print('movies_linear')
