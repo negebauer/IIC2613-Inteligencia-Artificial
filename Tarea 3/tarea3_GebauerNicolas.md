@@ -138,4 +138,37 @@ Otro tema relevante es como se codifican las palabras con `word2vec`. En este ca
 
 ##### Críticas inventadas
 
-Se volvió a probar el rendimiento de clasificación con SVM con las críticas inventadas, las cuales se encuentran en [fake_reviews](./fake_reviews)
+Se volvió a probar el rendimiento de clasificación con SVM con las críticas inventadas, las cuales se encuentran en [fake_reviews](./fake_reviews). Se probó con ambos _kernels_ ya que se ejecutaron las pruebas al mismo tiempo. El resultado pedido corresponde al obtenido con el _kernel_ lineal (el que tuvo mejor rendimiento antes). Los resultados obtenidos se guardaron en el archivo [3.4.6.log](./3.4.6.log) y se presentan ordenados a continuación:
+
+|prueba|_accuracy_|_precision_|
+|:-:|:-:|:-:|
+|movies_linear|0.7|0.7083333333333333|
+|movies_rbf|0.6|0.7777777777777778|
+
+Se observa que nuevamente el _kernel_ linear obtiene mejores resultados que el _kernel_ rdf. Las matrices de confusión obtenidas son las siguientes:
+
+
+![fake_movies_linear.png](fake_movies_linear.png)
+
+_Rendimiento SVM con las críticas inventadas con kernel linear_
+
+Se observa que hubo dos falsos positivos y un falso negativo. Se destaca que entre los comentarios inventados hay dos irónicos, que comienzan con palabras que se usan en comentarios positivos para finalizar con un comentario negativo.  
+Ejemplo:  
+> They said they had the best actors in the world.I didn't see one
+
+Se podría decir que críticas como esta tienen una mayor tendencia al error. Sobre el falso negativo, se tienen dos comentarios que podrían tener un contenido negativo:  
+> Altought it was slow, the movie was pretty good. The best I've seen  
+> It made me cry. I haven't cried in years. It was so beautifull
+
+Por lo que se puede concluir que el mezclar palabras positivas con negativas aumenta el error, pero aún así logra identificar correctamente algunos casos.
+
+![fake_movies_rbf.png](fake_movies_rbf.png)
+
+_Rendimiento SVM con las críticas inventadas con kernel rbf_
+
+Se observa que se mantiene la tendencia de falsos negativos. Aquí llama más la atención ya que en los comentarios positivos hay solo 2 que se podrían interpretar como negativos. El algoritmo interpeto negativamente alguno de los siguiente comentarios:  
+> I just can't believe how much this movie reflects my own life. Made me rethink everything I've done. The actors played their roles perfectly. 10/10  
+> It was just glorious  
+> I don't think I'll ever see a movie as good as this one
+
+Los cuales son positivos. RBF fue muy pobre en esta situación.
