@@ -108,21 +108,25 @@ Se puede observar en ambos casos que el kernel lineal tuvo un mejor resultado qu
 En lo que a las matrices de confusión respecta se obtenieron las siguientes:
 
 ![polarity_linear.png](polarity_linear.png)
+
 _Rendimiento SVM con los datos de polaridad con kernel lineal_
 
 Se observa que la gran mayoría de errores ocurren por positivos que fueron clasificados como negativos, el doble de lo que ocurrió con los negativos, un ~33% más.
 
 ![polarity_rbf.png](polarity_rbf.png)
+
 _Rendimiento SVM con los datos de polaridad con kernel rbf_
 
 Se observa que la tendencia con el modelo linear se repite, la mayoría de errores son falsos negativos. Se destaca que esta tendencia se incrementa, teniendo un ~42% de error en la predicción de positivos, lo cual es un error preocupante.
 
 ![movies_linear.png](movies_linear.png)
+
 _Rendimiento SVM con los datos de perlícula con kernel linear_
 
 Se destaca que la tendencía de falsos negativos no se mantiene para este modelo. Su rendimiento es alto (~83%) y no hay una diferencia notable entre los errores positivos y negativos, a diferencia de las matrices anteriores.
 
 ![movies_rbf.png](movies_rbf.png)
+
 _Rendimiento SVM con los datos de perlícula con kernel rbf_
 
 Se observa que hay una diferencia de 100 entre los falsos positivos y los falsos negativos. La tendencia observada con las polaridades se vuelve a cumplir en este caso. Esto puede deberse a que es común que criticas positivas incluyan comentarios negativos. Por ejemplo, hay críticas donde se critican los aspectos negativos de una película y se termina diciendo que a pesar de ellos la película es muy buena, lo cual puede ser causante de estos errores.
@@ -134,4 +138,4 @@ Otro tema relevante es como se codifican las palabras con `word2vec`. En este ca
 
 ##### Críticas inventadas
 
-Se volvió a probar el rendimiento de clasificación con SVM con las críticas inventadas, las cuales se encuentran en [fake_reviews](./fake_reviews) 
+Se volvió a probar el rendimiento de clasificación con SVM con las críticas inventadas, las cuales se encuentran en [fake_reviews](./fake_reviews)
