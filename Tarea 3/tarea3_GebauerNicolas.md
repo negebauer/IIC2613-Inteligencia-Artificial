@@ -10,9 +10,6 @@
 
 Primero se debe leer el [readme](readme.txt)
 
-bla bla bla
-
-
 ***
 
 #### Experimentos con Descenso de Gradiente
@@ -93,3 +90,9 @@ Se puede observar que efectivamente se cumplen algunas de las relaciones mencion
 Al observar las reseñas de películas se destaca que estas tienden a ser un conjunto de comentarios cortos, a diferencia de por ejemplo frases más largas y estructuradas. Sin embargo, siguen siendo comentarios con un orden más formal que los del archivo _polarity_. Este otro tiene mensajes informales y desordenados que incluyen, por ejemplo, comentarios sarcásticos que podrían ser más difíciles de entender para una inteligencia artificial, dado que el sentido del mensaje es el contrario del significado que se extrae de las palabras usadas.
 
 ##### SVM
+
+##### Matriz confusión
+
+##### Mejoras
+
+##### Críticas inventadas

@@ -1,5 +1,5 @@
 set_vars() {
-  dir=tarea2_
+  dir=tarea3_GebauerNicolas
   list=list
 }
 
@@ -18,9 +18,14 @@ temp_create() {
 files_load() {
   echo 'Prepping file list'
   ls | grep '.py' | grep -v '.pyc' >> $list
-  ls | grep 's3' | grep -v '.py' >> $list
+  ls | grep '.log' >> $list
+  ls | grep '.png' >> $list
   # ls | grep '.zip' >> $list
-  ls | grep '.txt' >> $list
+  # ls | grep '.txt' >> $list
+  echo 'readme.txt' >> $list
+  echo 'fake_reviews.txt' >> $list
+  echo 'tarea3_GebauerNicolas.md' >> $list
+  echo 'tarea3_GebauerNicolas.pdf' >> $list
   ls | grep '.sh' >> $list
   echo 'logs/' >> $list
   echo "File list"
